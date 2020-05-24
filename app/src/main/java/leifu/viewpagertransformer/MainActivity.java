@@ -16,6 +16,7 @@ import leifu.viewpagertransfomerlibrary.transformer.CubePageTransformer;
 import leifu.viewpagertransfomerlibrary.transformer.DepthPageTransformer;
 import leifu.viewpagertransfomerlibrary.transformer.FadePageTransformer;
 import leifu.viewpagertransfomerlibrary.transformer.FlipPageTransformer;
+import leifu.viewpagertransfomerlibrary.transformer.ParallaxPageTransformer;
 import leifu.viewpagertransfomerlibrary.transformer.RotatePageTransformer;
 import leifu.viewpagertransfomerlibrary.transformer.ZoomCenterPageTransformer;
 import leifu.viewpagertransfomerlibrary.transformer.ZoomFadePageTransformer;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ViewPager banner_main_Multiple, banner_main_ZoomOut, banner_main_alpha,banner_main_rotate,banner_main_cube,
             banner_main_accordion,banner_main_flip,banner_main_depth,banner_main_fade,banner_main_zoomFade
-            ,banner_main_zoomCenter,banner_main_zoom;
+            ,banner_main_zoomCenter,banner_main_zoom,banner_enter_exit;
 
 
     int arrayImgs[] = {R.mipmap.image1, R.mipmap.image2, R.mipmap.image3, R.mipmap.image4, R.mipmap.image5};
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         banner_main_zoomCenter = (ViewPager) findViewById(R.id.banner_main_zoomCenter);
         banner_main_zoom = (ViewPager) findViewById(R.id.banner_main_zoom);
+        banner_enter_exit = (ViewPager) findViewById(R.id.banner_enter_exit);
         //处理只能点击中间范围viewpage才能滑动,点击左右两边的viewpage也可以滑动,注意要设置LinearLayout的clickable="true"
         findViewById(R.id.ll_Multiple).setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -104,12 +106,21 @@ public class MainActivity extends AppCompatActivity {
         //左右滑动缩放
         banner_main_zoom.setPageTransformer(false, new ZoomPageTransformer());
         banner_main_zoom.setAdapter(new ViewPagerAdpter(getData()));
+        //仿页面滑动进入退出
+        banner_enter_exit.setPageTransformer(false, new ParallaxPageTransformer());
+        banner_enter_exit.setAdapter(new ViewPagerAdpter(getData(true)));
     }
 
     private List<ImageView> getData() {
+        return getData(false);
+    }
+    private List<ImageView> getData(boolean fill) {
         List<ImageView> imgList = new ArrayList<>();
         for (int i = 0; i < arrayImgs.length; i++) {
             ImageView imageView = new ImageView(getApplicationContext());
+            if (fill) {
+                imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            }
             imageView.setImageResource(arrayImgs[i]);
             imgList.add(imageView);
         }

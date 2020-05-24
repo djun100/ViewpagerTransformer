@@ -3,10 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ViewpagerTransformer.iml" filepath="$PROJECT_DIR$/ViewpagerTransformer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ViewpagerTransformer.iml" filepath="$PROJECT_DIR$/ViewpagerTransformer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/ViewpagerTransformer-app.iml" filepath="$PROJECT_DIR$/app/ViewpagerTransformer-app.iml" group="ViewpagerTransformer/app" />
+      <module fileurl="file://$PROJECT_DIR$/viewpagertransfomerlibrary/ViewpagerTransformer-viewpagertransfomerlibrary.iml" filepath="$PROJECT_DIR$/viewpagertransfomerlibrary/ViewpagerTransformer-viewpagertransfomerlibrary.iml" group="ViewpagerTransformer/viewpagertransfomerlibrary" />
+      <module fileurl="file://$PROJECT_DIR$/android-ViewpagerTransformer.iml" filepath="$PROJECT_DIR$/android-ViewpagerTransformer.iml" group="ViewpagerTransformer" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/viewpagertransfomerlibrary/viewpagertransfomerlibrary.iml" filepath="$PROJECT_DIR$/viewpagertransfomerlibrary/viewpagertransfomerlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/viewpagertransfomerlibrary/viewpagertransfomerlibrary.iml" filepath="$PROJECT_DIR$/viewpagertransfomerlibrary/viewpagertransfomerlibrary.iml" />
     </modules>
   </component>

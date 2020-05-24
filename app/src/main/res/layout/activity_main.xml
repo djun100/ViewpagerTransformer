@@ -195,5 +195,18 @@
             android:id="@+id/banner_main_zoom"
             android:layout_width="match_parent"
             android:layout_height="120dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="仿页面滑动退出效果"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/banner_enter_exit"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"/>
     </LinearLayout>
 </ScrollView>
